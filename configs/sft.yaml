@@ -1,0 +1,94 @@
+# CustomScriptArguments
+raw_rollout: false
+wandb_project: r1qa
+wandb_run_group: sft
+wandb_tags: Qwen3-4B,mbt-r,sft,1e-4,64
+train_seed: 42
+
+# ScriptArguments
+dataset_name: metacognitive-behavioral-tuning/mbt-r-hotpotqa
+dataset_config: Qwen3-4B
+dataset_train_split: train
+dataset_test_split: test
+dataset_streaming: false
+gradient_checkpointing_use_reentrant: false
+ignore_bias_buffers: false
+
+# SFTConfig
+# Parameters whose default values are overridden from TrainingArguments
+learning_rate: 1e-4
+logging_steps: 0.01
+gradient_checkpointing: true
+bf16: true
+# Parameters that control the model
+model_init_kwargs: null
+chat_template_path: null
+# Parameters that control the data preprocessing
+dataset_text_field: text
+dataset_kwargs:
+  skip_prepare_dataset: true
+dataset_num_proc: null
+eos_token: null
+pad_token: null
+max_length: 32768
+packing: false
+packing_strategy: bfd
+padding_free: false
+pad_to_multiple_of: null
+eval_packing: null
+# Parameters that control the training
+completion_only_loss: true
+assistant_only_loss: false
+loss_type: nll
+activation_offloading: false
+
+# TrainingArguments
+output_dir: output/train/Qwen3-4B/mbt-r/sft/1e-4/64
+eval_strategy: "no"
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 16
+torch_empty_cache_steps: 1
+weight_decay: 0.0
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_epsilon: 1e-8
+max_grad_norm: 0.3
+num_train_epochs: 1
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+logging_strategy: steps
+logging_first_step: true
+save_strategy: "no"
+tf32: true
+dataloader_num_workers: null
+run_name: null
+remove_unused_columns: true
+optim: adamw_torch_fused
+report_to: all
+dataloader_pin_memory: true
+push_to_hub: false
+resume_from_checkpoint: null
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+use_liger_kernel: true
+
+# ModelConfig
+model_name_or_path: Qwen/Qwen3-4B
+model_revision: main
+dtype: bfloat16
+trust_remote_code: false
+attn_implementation: flash_attention_2
+use_peft: false
+lora_r: 64
+lora_alpha: 32
+lora_dropout: 0.0
+lora_target_modules: all-linear
+lora_target_parameters: null
+lora_modules_to_save: null
+lora_task_type: CAUSAL_LM
+use_rslora: false
+use_dora: false
+load_in_8bit: false
+load_in_4bit: false
+bnb_4bit_quant_type: nf4
+use_bnb_nested_quant: false

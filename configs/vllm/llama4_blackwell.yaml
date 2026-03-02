@@ -1,0 +1,6 @@
+kv-cache-dtype: fp8
+compilation-config: '{"pass_config": {"fuse_allreduce_rms": true, "eliminate_noops": true}}'
+gpu-memory-utilization: 0.85
+async-scheduling: true
+max-cudagraph-capture-size: 2048
+max-num-batched-tokens: 8192

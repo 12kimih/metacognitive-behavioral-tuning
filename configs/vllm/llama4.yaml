@@ -1,0 +1,5 @@
+kv-cache-dtype: fp8
+gpu-memory-utilization: 0.85
+async-scheduling: true
+max-cudagraph-capture-size: 2048
+max-num-batched-tokens: 8192

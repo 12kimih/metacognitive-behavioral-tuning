@@ -1,0 +1,88 @@
+[project]
+name = "mbt"
+version = "0.1.0"
+description = "Mirroring the Mind: Distilling Human-Like Metacognitive Strategies into Large Language Models"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate",
+    "bitsandbytes",
+    "datasets",
+    "evaluate",
+    "flash-attn",
+    "huggingface-hub[cli]",
+    "liger-kernel",
+    "math-verify",
+    "matplotlib",
+    "openai>=2.15.0",
+    "pandas",
+    "peft",
+    "python-dotenv",
+    "seaborn",
+    "tenacity",
+    "tiktoken",
+    "torch",
+    "torchvision",
+    "torch-c-dlpack-ext",
+    "tqdm",
+    "trafilatura",
+    "transformers>=4.57.5",
+    "trl>=0.26.2",
+    "wandb",
+]
+
+[project.scripts]
+mbt = "mbt.main:main"
+
+[project.optional-dependencies]
+vllm = ["vllm>=0.13.0"]
+
+[dependency-groups]
+dev = ["jupyter", "mypy", "pre-commit", "pytest", "pytest-cov", "ruff"]
+
+[build-system]
+requires = ["uv_build>=0.9.8,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+python-preference = "only-managed"
+
+[tool.uv.sources]
+flash-attn = { url = "https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl" }
+
+# [tool.uv.extra-build-dependencies]
+# flash-attn = [
+#     { requirement = "ninja" },
+#     { requirement = "packaging" },
+#     { requirement = "torch", match-runtime = true },
+# ]
+
+[tool.ruff]
+line-length = 320
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # flake8-logging-format
+    "G",
+]
+ignore = [
+    # line-length
+    "E501",
+    # logging-f-string
+    "G004",
+]
+
+[tool.ruff.format]
+docstring-code-format = true
