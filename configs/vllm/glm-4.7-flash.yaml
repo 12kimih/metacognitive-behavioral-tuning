@@ -1,0 +1,10 @@
+model: zai-org/GLM-4.7-Flash
+max_model_len: 32768
+gpu-memory-utilization: 0.9
+tensor-parallel-size: 4
+trust-remote-code: true
+# tool-call-parser: glm47
+# enable-auto-tool-choice: true
+reasoning-parser: glm45
+# speculative-config.method: mtp
+# speculative-config.num_speculative_tokens: 1

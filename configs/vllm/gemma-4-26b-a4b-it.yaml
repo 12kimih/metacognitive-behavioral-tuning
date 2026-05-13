@@ -1,0 +1,8 @@
+model: google/gemma-4-26B-A4B-it
+max_model_len: 32768
+gpu-memory-utilization: 0.9
+tensor-parallel-size: 4
+# enable-auto-tool-choice: true
+# tool-call-parser: gemma4
+# chat-template: examples/tool_chat_template_gemma4.jinja
+reasoning-parser: gemma4

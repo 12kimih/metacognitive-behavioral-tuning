@@ -1,0 +1,97 @@
+[project]
+name = "mbt"
+version = "0.1.0"
+description = "Metacognitive Behavioral Tuning of Large Language Models for Multi-Hop Question Answering"
+readme = "README.md"
+authors = [{ name = "Ik-hwan Kim", email = "12kimih@gmail.com" }]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "accelerate>=1.13.0",
+    "anthropic",
+    "bitsandbytes",
+    "datasets>=4.8.5",
+    "evaluate",
+    "flash-attn",
+    "flash-attn-4",
+    "google-genai",
+    "huggingface-hub",
+    "liger-kernel",
+    "math-verify",
+    "matplotlib",
+    "omegaconf>=2.3.0",
+    "openai>=2.33.0",
+    "pandas",
+    "peft>=0.19.1",
+    "python-dotenv",
+    "rich>=15.0.0",
+    "scikit-learn",
+    "scipy",
+    "seaborn",
+    "tenacity",
+    "tiktoken",
+    "torch",
+    "torchvision",
+    "torch-c-dlpack-ext",
+    "tqdm",
+    "transformers",
+    "trl>=1.3.0",
+    "typer>=0.25.1",
+    "vllm==0.19.1",
+    "wandb",
+]
+
+[project.scripts]
+mbt = "mbt.main:main"
+
+[dependency-groups]
+dev = ["jupyter", "mypy", "pre-commit", "pytest", "pytest-cov", "ruff"]
+docs = ["mkdocs-material>=9.7.6", "mkdocs-static-i18n>=1.3.1"]
+
+[build-system]
+requires = ["uv_build>=0.11.3,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+python-preference = "only-managed"
+prerelease = "allow"
+
+[tool.uv.sources]
+flash-attn = { url = "https://github.com/mjun0812/flash-attention-prebuild-wheels/releases/download/v0.9.0/flash_attn-2.8.3+cu128torch2.10-cp312-cp312-linux_x86_64.whl" }
+
+# [tool.uv.extra-build-dependencies]
+# flash-attn = [
+#     "packaging",
+#     "psutil",
+#     "ninja",
+#     { requirement = "torch", match-runtime = true },
+# ]
+
+[tool.ruff]
+line-length = 320
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # flake8-logging-format
+    "G",
+]
+ignore = [
+    # line-length
+    "E501",
+    # logging-f-string
+    "G004",
+]
+
+[tool.ruff.format]
+docstring-code-format = true

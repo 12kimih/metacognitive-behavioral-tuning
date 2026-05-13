@@ -1,0 +1,8 @@
+model: openai/gpt-oss-120b
+max_model_len: 32768
+gpu-memory-utilization: 0.9
+tensor-parallel-size: 4
+# tool-call-parser: openai
+# enable-auto-tool-choice: true
+# speculative-config: "{\"model\":\"nvidia/gpt-oss-120b-Eagle3-v2\",\"num_specula\
+#   tive_tokens\":3,\"method\":\"eagle3\",\"draft_tensor_parallel_size\":1}"

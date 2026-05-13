@@ -1,0 +1,11 @@
+model: Qwen/Qwen3.5-9B
+max_model_len: 32768
+gpu-memory-utilization: 0.9
+tensor-parallel-size: 4
+trust-remote-code: true
+# enable-auto-tool-choice: true
+# tool-call-parser: qwen3_coder
+reasoning-parser: qwen3
+# mm-encoder-tp-mode: data
+# speculative-config: '{"method":"mtp","num_speculative_tokens":1}'
+language-model-only: true

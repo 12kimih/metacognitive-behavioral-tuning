@@ -1,0 +1,9 @@
+model: nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16
+max_model_len: 32768
+gpu-memory-utilization: 0.9
+tensor-parallel-size: 4
+trust-remote-code: true
+# enable-auto-tool-choice: true
+# tool-call-parser: qwen3_coder
+reasoning-parser-plugin: nano_v3_reasoning_parser.py
+reasoning-parser: nano_v3

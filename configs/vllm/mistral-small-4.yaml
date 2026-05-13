@@ -1,0 +1,5 @@
+model: mistralai/Mistral-Small-4-119B-2603
+max_model_len: 32768
+gpu-memory-utilization: 0.9
+tensor-parallel-size: 4
+reasoning-parser: mistral

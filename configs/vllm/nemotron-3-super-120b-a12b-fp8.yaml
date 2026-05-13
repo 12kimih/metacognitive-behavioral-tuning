@@ -1,0 +1,9 @@
+model: nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8
+max_model_len: 32768
+gpu-memory-utilization: 0.9
+tensor-parallel-size: 4
+trust-remote-code: true
+kv-cache-dtype: fp8
+# enable-auto-tool-choice: true
+# tool-call-parser: qwen3_coder
+reasoning-parser: nemotron_v3

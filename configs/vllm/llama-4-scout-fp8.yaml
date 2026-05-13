@@ -1,0 +1,5 @@
+model: nvidia/Llama-4-Scout-17B-16E-Instruct-FP8
+max_model_len: 32768
+gpu-memory-utilization: 0.9
+tensor-parallel-size: 4
+kv-cache-dtype: fp8
