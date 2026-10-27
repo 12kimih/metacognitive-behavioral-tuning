@@ -1,0 +1,17 @@
+Metacognitive Behavioral Tuning (MBT)
+Copyright 2026 The MBT Authors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Original editing, generation and annotation prompt texts use the same license.
+Third-party reference grading prompts retain their upstream licenses:
+- NVIDIA NeMo-Skills math judge: Apache-2.0, adapted from OpenAI simple-evals.
+- HLE GPQA judge: MIT, Copyright (c) 2025 centerforaisafety.
+- inspect_evals SimpleQA Verified judge: MIT, Copyright (c) 2024 UK AI Security Institute.
+- OpenAI simple-evals: MIT, Copyright (c) 2024 OpenAI.
+
+Full source references, template-encoding changes and license texts are included
+in src/mbt/prompts/grading/.
+
+The MBT-A sandbox installs Claude Code at run time; Claude Code is not part of this
+product and is used under Anthropic's own terms.

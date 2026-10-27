@@ -1,0 +1,4 @@
+{
+ "file_facts": "Here is `trajectory.md`, with the labels in its REASONING. The REASONING is {chars:,}\ncharacters in {markers:,} paragraphs, `[[#1]]` to `[[#{markers}]]`.\n",
+ "after_file": "===== END OF trajectory.md =====\n\nThat is the whole file. Your reply is not an answer to its PROBLEM: it is your list of deletions\nand then your NOTES, in the shape set out above, starting with the line `===== DELETION =====`\n(or `===== NOTES =====` if nothing in the REASONING is one of the eight behaviours).\n"
+}

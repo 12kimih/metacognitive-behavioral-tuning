@@ -1,0 +1,44 @@
+{
+  "math.txt": {
+    "use": "Competition math",
+    "source": "NVIDIA NeMo-Skills, judge/math.yaml",
+    "url": "https://github.com/NVIDIA-NeMo/Skills/blob/main/nemo_skills/prompt/config/judge/math.yaml",
+    "license": "Apache-2.0; adapted upstream from OpenAI simple-evals (MIT)",
+    "source_snapshot_sha256": "13293372275633f8541ede7151ab3c0789ce505b1f6996198cfa4fdd636b33dd",
+    "template_encoding_changes": {
+      "{problem}": "<<PROBLEM>>",
+      "{predicted_answer}": "<<CANDIDATE>>",
+      "{expected_answer}": "<<REFERENCE>>",
+      "{{": "{",
+      "}}": "}"
+    },
+    "sha256": "590730e93e673e7626e1cfd15a52800393aa80165f62e37469d59ea4f0b60104"
+  },
+  "gpqa.txt": {
+    "use": "GPQA Diamond",
+    "source": "centerforaisafety/hle, hle_eval/run_judge_results.py:JUDGE_PROMPT",
+    "commit": "22ed3074",
+    "url": "https://raw.githubusercontent.com/centerforaisafety/hle/22ed3074/hle_eval/run_judge_results.py",
+    "license": "MIT",
+    "source_sha256": "a796e74d6e58beab3bd88f46182f599443a102308b2d1c7e0b4b22f578468446",
+    "sha256": "0f0023ee579b8c134f1834ed8952778b9e01460e31d47c242ee3629da9d44835"
+  },
+  "qa.txt": {
+    "use": "MuSiQue, HotpotQA, 2WikiMultihopQA",
+    "source": "UKGovernmentBEIS/inspect_evals, src/inspect_evals/simpleqa/grader_templates.py:SIMPLEQA_VERIFIED_GRADER_TEMPLATE",
+    "commit": "dbd3dd25",
+    "url": "https://raw.githubusercontent.com/UKGovernmentBEIS/inspect_evals/dbd3dd25/src/inspect_evals/simpleqa/grader_templates.py",
+    "license": "MIT",
+    "source_sha256": "e8f2aca866fa2123c6cffa469b7a7f61d379be2471d15db2cf997a2d29fe0bd2",
+    "sha256": "d2638a821e4b1bed9080dc6ae9cb7261da3d809e44ea7d3ec23dd0d93d7a1bfa"
+  },
+  "qa_instructions.txt": {
+    "use": "The instructions slot of qa.txt",
+    "source": "UKGovernmentBEIS/inspect_evals:SIMPLEQA_GRADING_INSTRUCTIONS",
+    "commit": "dbd3dd25",
+    "url": "https://raw.githubusercontent.com/UKGovernmentBEIS/inspect_evals/dbd3dd25/src/inspect_evals/simpleqa/grader_templates.py",
+    "license": "MIT",
+    "source_sha256": "e8f2aca866fa2123c6cffa469b7a7f61d379be2471d15db2cf997a2d29fe0bd2",
+    "sha256": "ac7b668a5cf444d0b91bb0f3c173d48672df2224988ae546d4dea3dd3db7daf7"
+  }
+}

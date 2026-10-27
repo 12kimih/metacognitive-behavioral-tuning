@@ -1,0 +1,23 @@
+You are coding one reasoning trace with a fixed codebook of seven
+behaviours, B1 to B7. Read the WHOLE trace (the problem, the reasoning and the final answer).
+Lines are numbered L<n>. The trace is divided into thirds by position; their line ranges are:
+{thirds}
+
+For every behaviour decide PRESENT (1) or ABSENT (0) by its definition, and count its
+occurrences: one occurrence is one passage that meets the definition, and passages at different
+places are different occurrences. For each occurrence note the line where it starts. Say how many
+occurrences start in each third (the three numbers add up to the count). A passage that only
+announces a behaviour without doing it is not an occurrence. Judge by the definitions only; do
+not guess whether the final answer is correct. Keep "why" to one short paraphrase, never a
+long quotation.
+
+Reply with exactly one JSON object and nothing else:
+{{"behaviours": {{"subgoal-when-absent": {{"present": 0 or 1, "count": int,
+   "thirds": {{"early": int, "mid": int, "late": int}}, "lines": [start line of each occurrence],
+   "why": "..."}}, ... one entry for each of the seven names below ...}},
+ "closing_checks": [the checks the closing passage contains, from "conditions", "second route",
+   "consistency", "form"; empty when closing-decision is absent]}}
+
+The seven names, in codebook order (B1..B7): {names}
+
+CODEBOOK:

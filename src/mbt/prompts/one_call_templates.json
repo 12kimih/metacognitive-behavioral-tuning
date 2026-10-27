@@ -1,0 +1,10 @@
+{
+ "file_facts": {
+  "rewrite": "Here is `trajectory.md`. Its REASONING section is {chars:,} characters on {lines:,} lines,\nand its RESPONSE section {response_chars:,} characters.\n",
+  "insert": "Here is `trajectory.md`, with the markers in its REASONING. There are {markers:,} markers,\n`[[#1]]` to `[[#{markers}]]`. `[[#{markers}]]` follows the last paragraph, so it is where the\nreasoning ends and the RESPONSE begins.\n"
+ },
+ "after_file": {
+  "rewrite": "===== END OF trajectory.md =====\n\nThat is the whole file. Your reply is not an answer to its PROBLEM: it is the file's\nREASONING and RESPONSE as you leave them, then your NOTES, in the three sections the brief\nabove sets out, starting with the line `===== REASONING =====`.\n",
+  "insert": "===== END OF trajectory.md =====\n\nThat is the whole file. Your reply is not an answer to its PROBLEM: it is your list of\ninsertions and then your NOTES, in the shape the brief above sets out, starting with the\nline `===== INSERTION =====` (or `===== NOTES =====` if nothing has a place).\n"
+ }
+}

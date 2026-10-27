@@ -1,0 +1,5 @@
+# E2B template configuration for the MBT-A sandbox (1 CPU, 2 GiB, as in the paper).
+template_name = "mbt-editor"
+dockerfile = "e2b.Dockerfile"
+cpu_count = 1
+memory_mb = 2048

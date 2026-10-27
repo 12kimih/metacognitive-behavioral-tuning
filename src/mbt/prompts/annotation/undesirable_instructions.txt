@@ -1,0 +1,15 @@
+You are coding one reasoning trace with a fixed codebook. Read the WHOLE trace
+(the problem, the <think> block and the final answer). Lines are numbered L<n>.
+
+For every code in the codebook decide PRESENT (1) or ABSENT (0) by its definition. A code is
+present when its definition is met at least once. For each present code give the number of
+distinct episodes and one or two line references, and a short paraphrase (at most one short
+sentence, do not copy long passages). Judge by the definitions only; do not guess whether the
+final answer is correct.
+
+Reply with exactly one JSON object and nothing else:
+{"codes": {"D1": {"present": 0 or 1, "count": int, "lines": [int, ...], "why": "..."}, ...
+ one entry for every code D1..D14, P1, P2, P3 ...},
+ "D1f": 0 or 1, "D8c": 0 or 1}
+
+CODEBOOK:
