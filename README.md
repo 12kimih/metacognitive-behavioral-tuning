@@ -115,10 +115,13 @@ attribution in the data package. See [NOTICE](NOTICE) for third-party notices.
 ## 📚 Citation
 
 ```bibtex
-@misc{mbt2026,
-  title  = {Distilling Metacognitive Behaviors through Agentic Editing},
-  author = {Kim, Ik-hwan and Han, Hyeongrok and Jung, Mingi and Yu, Sangwon and Hong, Jinseok and Kim, Sang Hun and Choi, Yoonyoung and Yoon, Sungroh},
-  year   = {2026},
-  note   = {Under review}
+@misc{kim2026distilling,
+  title         = {Distilling Metacognitive Behaviors through Agentic Editing},
+  author        = {Kim, Ik-hwan and Han, Hyeongrok and Jung, Mingi and Yu, Sangwon and Hong, Jinseok and Kim, Sang Hun and Choi, Yoonyoung and Yoon, Sungroh},
+  year          = {2026},
+  eprint        = {2602.22508},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  url           = {https://arxiv.org/abs/2602.22508}
 }
 ```
